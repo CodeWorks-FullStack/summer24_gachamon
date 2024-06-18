@@ -4,6 +4,8 @@ import { setHTML } from "../utils/Writer.js";
 
 export class GachamonsController {
   constructor() {
+    AppState.on('activeGachamon', this.drawActiveGachamon)
+
     console.log('Gachamons Controller loaded');
     this.drawGachamonCatalog()
   }
@@ -29,6 +31,12 @@ export class GachamonsController {
   setActiveGachamon(gachamonId) {
     console.log('setting active gachamon with the id of ' + gachamonId);
     gachamonsService.setActiveGachamon(gachamonId)
-    this.drawActiveGachamon()
+    // this.drawActiveGachamon()
+  }
+
+  purchaseRandomGachamon() {
+    console.log('GACHA GACHA GACHAMON');
+    gachamonsService.purchaseRandomGachamon()
+    // this.drawActiveGachamon()
   }
 }

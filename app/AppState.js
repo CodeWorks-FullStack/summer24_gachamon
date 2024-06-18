@@ -7,6 +7,7 @@ class ObservableAppState extends EventEmitter {
   /**@type {import('./models/Example.js').Example[]} */
   examples = []
 
+  /**@type {Gachamon[]} */
   gachamons = [
     new Gachamon(
       'Petey',
@@ -42,8 +43,11 @@ class ObservableAppState extends EventEmitter {
       '🦧',
       'ultra-rare',
       'https://em-content.zobj.net/source/microsoft-teams/363/orangutan_1f9a7.png'
-    ),
+    )
   ]
+
+  /**@type {Gachamon[]} */
+  myGachamonsCollection = []
 
   // NOTE there is nothing here on page load, but we will change the value later
   // @type gives us intellisense in our code
