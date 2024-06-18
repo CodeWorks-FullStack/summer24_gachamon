@@ -15,6 +15,11 @@ export class CoinsController {
   }
 
   drawCoins() {
-    setText('coinCount', AppState.coins)
+    let coinEmojis = ''
+    for (let i = 0; i < AppState.coins; i++) {
+      // FIXME maybe add the silver coin
+      coinEmojis += '🪙'
+    }
+    setText('coinCount', coinEmojis)
   }
 }
