@@ -12,4 +12,4 @@ export class Gachamon {
 }
 
 
-// new Gachamon('Petey', '🦚', 'common', 'https://em-content.zobj.net/source/microsoft-teams/363/peacock_1f99a.png')
+// const petey = new Gachamon('Petey', '🦚', 'common', 'https://em-content.zobj.net/source/microsoft-teams/363/peacock_1f99a.png')

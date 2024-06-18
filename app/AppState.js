@@ -18,7 +18,13 @@ class ObservableAppState extends EventEmitter {
       '🦛',
       'uncommon',
       'https://em-content.zobj.net/source/microsoft-teams/363/hippopotamus_1f99b.png'
-    )
+    ),
+    new Gachamon(
+      'Lil Jeremy',
+      '🦞',
+      'rare',
+      'https://em-content.zobj.net/source/microsoft-teams/363/lobster_1f99e.png'
+    ),
   ]
 }
 
