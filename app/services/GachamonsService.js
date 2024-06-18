@@ -36,7 +36,7 @@ class GachamonsService {
   addGachamonToMyCollection() {
     const myGachamons = AppState.myGachamonsCollection
     const activeGachamon = AppState.activeGachamon
-    myGachamons.push(activeGachamon)
+    myGachamons.push(activeGachamon) // 💂 myGachamonsCollection!!!!!
 
     console.log('GACHA GACHA MY GACHAMONS', myGachamons);
   }

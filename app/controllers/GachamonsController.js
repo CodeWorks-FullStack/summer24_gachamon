@@ -5,6 +5,7 @@ import { setHTML } from "../utils/Writer.js";
 export class GachamonsController {
   constructor() {
     AppState.on('activeGachamon', this.drawActiveGachamon)
+    AppState.on('myGachamonsCollection', this.drawMyGachamons)
 
     console.log('Gachamons Controller loaded');
     this.drawGachamonCatalog()
@@ -26,6 +27,13 @@ export class GachamonsController {
     const activeGachamon = AppState.activeGachamon
     console.log('drawing information for the active gachamon', activeGachamon);
     setHTML('activeGachamon', activeGachamon.activeHTMLTemplate)
+  }
+
+  drawMyGachamons() {
+    const gachamons = AppState.myGachamonsCollection
+    let innerHTMLString = ''
+    gachamons.forEach((gachamon) => innerHTMLString += gachamon.catalogHTMLTemplate)
+    setHTML('myGachamons', innerHTMLString)
   }
 
   setActiveGachamon(gachamonId) {
