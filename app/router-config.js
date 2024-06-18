@@ -1,3 +1,4 @@
+import { CoinsController } from "./controllers/CoinsController.js";
 import { GachamonsController } from "./controllers/GachamonsController.js";
 import { Router } from "./utils/Router.js";
 
@@ -5,7 +6,7 @@ import { Router } from "./utils/Router.js";
 export const router = new Router([
   {
     path: '',
-    controllers: [GachamonsController],
+    controllers: [GachamonsController, CoinsController],
     view: ''
   },
   {
