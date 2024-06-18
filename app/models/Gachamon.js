@@ -13,7 +13,7 @@ export class Gachamon {
   get catalogHTMLTemplate() {
     return `
      <div class="col-2">
-        <div class="text-center" title="See details for ${this.name}" role="button">
+        <div onclick="app.GachamonsController.setActiveGachamon('${this.name}')" class="text-center" title="See details for ${this.name}" role="button">
           <p class="display-1">${this.icon}</p>
         </div>
       </div>

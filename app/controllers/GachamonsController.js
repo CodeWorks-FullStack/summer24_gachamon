@@ -18,4 +18,8 @@ export class GachamonsController {
     // NOTE utility function you can import, that takes in an ID from your HTML, and a string of HTML, and draws to said ID
     setHTML('gachamonCatalog', innerHTMLString)
   }
+
+  setActiveGachamon(gachamonName) {
+    console.log('setting active gachamon with the name of ' + gachamonName);
+  }
 }
