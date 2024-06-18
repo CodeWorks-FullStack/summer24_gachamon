@@ -26,9 +26,9 @@ export class GachamonsController {
     setHTML('activeGachamon', activeGachamon.activeHTMLTemplate)
   }
 
-  setActiveGachamon(gachamonName) {
-    console.log('setting active gachamon with the name of ' + gachamonName);
-    gachamonsService.setActiveGachamon(gachamonName)
+  setActiveGachamon(gachamonId) {
+    console.log('setting active gachamon with the id of ' + gachamonId);
+    gachamonsService.setActiveGachamon(gachamonId)
     this.drawActiveGachamon()
   }
 }
