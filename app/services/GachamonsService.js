@@ -28,15 +28,14 @@ class GachamonsService {
 
     console.log('random gachamon!', randomGachamon);
 
-    AppState.activeGachamon = randomGachamon // 💂 activeGachamon!!!!!
+    this.addGachamonToMyCollection(randomGachamon)
 
-    this.addGachamonToMyCollection()
+    AppState.activeGachamon = randomGachamon // 💂 activeGachamon!!!!!
   }
 
-  addGachamonToMyCollection() {
+  addGachamonToMyCollection(gachamon) {
     const myGachamons = AppState.myGachamonsCollection
-    const activeGachamon = AppState.activeGachamon
-    myGachamons.push(activeGachamon) // 💂 myGachamonsCollection!!!!!
+    myGachamons.push(gachamon) // 💂 myGachamonsCollection!!!!!
 
     console.log('GACHA GACHA MY GACHAMONS', myGachamons);
   }
