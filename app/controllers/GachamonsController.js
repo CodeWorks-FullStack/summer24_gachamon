@@ -1,4 +1,5 @@
 import { AppState } from "../AppState.js";
+import { gachamonsService } from "../services/GachamonsService.js";
 import { setHTML } from "../utils/Writer.js";
 
 export class GachamonsController {
@@ -19,7 +20,15 @@ export class GachamonsController {
     setHTML('gachamonCatalog', innerHTMLString)
   }
 
+  drawActiveGachamon() {
+    const activeGachamon = AppState.activeGachamon
+    console.log('drawing information for the active gachamon', activeGachamon);
+    setHTML('activeGachamon', activeGachamon.activeHTMLTemplate)
+  }
+
   setActiveGachamon(gachamonName) {
     console.log('setting active gachamon with the name of ' + gachamonName);
+    gachamonsService.setActiveGachamon(gachamonName)
+    this.drawActiveGachamon()
   }
 }

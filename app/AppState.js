@@ -44,6 +44,11 @@ class ObservableAppState extends EventEmitter {
       'https://em-content.zobj.net/source/microsoft-teams/363/orangutan_1f9a7.png'
     ),
   ]
+
+  // NOTE there is nothing here on page load, but we will change the value later
+  // @type gives us intellisense in our code
+  /**@type {Gachamon} */
+  activeGachamon = null
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())

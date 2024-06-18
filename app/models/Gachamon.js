@@ -13,7 +13,7 @@ export class Gachamon {
   get catalogHTMLTemplate() {
     return `
      <div class="col-2">
-        <div onclick="app.GachamonsController.setActiveGachamon('${this.name}')" class="text-center" title="See details for ${this.name}" role="button">
+        <div onclick="app.GachamonsController.setActiveGachamon('${this.name}')" class="text-center" title="See details for the ${this.rarity} ${this.name}" role="button">
           <p class="display-2">${this.icon}</p>
         </div>
       </div>
@@ -24,9 +24,9 @@ export class Gachamon {
     return `
      <div class="col-12">
       <div class="text-center">
-        <p class="fs-1">Petey</p>
-        <p class="fs-2">Common</p>
-        <img src="https://em-content.zobj.net/source/microsoft-teams/363/peacock_1f99a.png" alt="Picture of Petey">
+        <p class="fs-1">${this.name}</p>
+        <p class="fs-2">${this.rarity}</p>
+        <img src="${this.picture}" alt="Picture of ${this.name}">
       </div>
      </div>
     `
