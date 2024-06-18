@@ -1,3 +1,4 @@
+import { Gachamon } from './models/Gachamon.js'
 import { EventEmitter } from './utils/EventEmitter.js'
 import { createObservableProxy } from './utils/ObservableProxy.js'
 
@@ -5,6 +6,20 @@ class ObservableAppState extends EventEmitter {
 
   /**@type {import('./models/Example.js').Example[]} */
   examples = []
+
+  gachamons = [
+    new Gachamon(
+      'Petey',
+      '🦚',
+      'common',
+      'https://em-content.zobj.net/source/microsoft-teams/363/peacock_1f99a.png'),
+    new Gachamon(
+      'Ben',
+      '🦛',
+      'uncommon',
+      'https://em-content.zobj.net/source/microsoft-teams/363/hippopotamus_1f99b.png'
+    )
+  ]
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())
